@@ -27,3 +27,4 @@ public class Sedan extends Car{
 //  ile çarp bunları araba günlüklük kirasıyla çarp
 
 }
+

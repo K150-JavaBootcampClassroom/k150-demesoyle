@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 
 public class Car {  //car adında bir clas olşturuldu.  özellikler  bellirlendi .
-    private int modelYear;
+    public int modelYear;
     private String carBrand;
 
     private String carColor;
@@ -13,10 +13,10 @@ public class Car {  //car adında bir clas olşturuldu.  özellikler  bellirlend
 
 
 
-    LocalDate localDate = LocalDate.now(); // arabaların eski ve yeni oluşuna göre ayrılması için
+    static LocalDate localDate = LocalDate.now(); // arabaların eski ve yeni oluşuna göre ayrılması için
     // şimdi ki yılı alamk için oluşturulan nesne
 
-    int nowYear = localDate.getYear(); // şimdi ki yıl değişkeni
+    static int nowYear = localDate.getYear(); // şimdi ki yıl değişkeni
 
 
 
@@ -67,9 +67,6 @@ public class Car {  //car adında bir clas olşturuldu.  özellikler  bellirlend
     public void setCarColor(String carColor){
         this.carColor=carColor;
     }
-
-
-
 
 }
 

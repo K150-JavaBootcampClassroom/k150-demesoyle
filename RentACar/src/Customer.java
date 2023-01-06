@@ -15,7 +15,7 @@ public class Customer {
 
     }
 
-
+    public  int selectedCarModelYear ;
     public void axiom(){
         System.out.println("lütfen dumunuzu belirtiniz. ");
         System.out.println("şirket için :company veya  şahış olarak:kişi yazınız ");
@@ -42,6 +42,20 @@ public class Customer {
                 System.out.println("Renk: " + car.getCarColor());
                 System.out.println("Yolcu Kapasitesi: " + car.getPassCapacity());
             }
+            System.out.println("arabalar :");
+
+            // gösterilecek araba seçenekleri
+            for (int i = 0; i < Suv.listCompany.size(); i++) {
+                System.out.println((i+1) + ". " + Suv.listCompany.get(i));
+            }
+
+            // Read user input
+            Scanner input = new Scanner(System.in);
+            System.out.print("kaçıncı arabayı seçtiğinizi belirtiniz: ");
+            int selection1 = input.nextInt();
+
+            // Get the selected car
+            Car selectedCar = Suv.listCompany.get(selection1-1);
 
         }else if (selection.equals("kişi")){
             //kişi ise sadece Hatçbagleri görebilsin
@@ -51,12 +65,26 @@ public class Customer {
                 System.out.println("Renk: " + car.getCarColor());
                 System.out.println("Yolcu Kapasitesi: " + car.getPassCapacity());
             }
+            System.out.println("arabalarrr:");
+
+            // gösterilecek arabalar
+            for (int i = 0; i < Hatchback.listkisi.size(); i++) {
+                System.out.println((i+1) + ". " + Hatchback.listkisi.get(i));
+            }
+            // kulanıcıdan araba seçim isteği
+            Scanner input = new Scanner(System.in);
+            System.out.print("Enter the number of the car you want to select: ");
+            int selection2 = input.nextInt();
+
+            // seçilen araba
+            Car selectedCar = Hatchback.listkisi.get(selection2-1);
+            int selectedCarModelYear=selectedCar.getModelYear();
+            
+
 
 
         }
 
     }
-
-
 
 }

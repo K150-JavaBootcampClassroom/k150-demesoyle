@@ -22,8 +22,11 @@ public class Suv extends Car{
     public static void main(String[] args) {
         Suv suv1=new Suv(2020,"kia","kırmızı",5,1);
         System.out.println(suv1);
+        System.out.println(Car.nowYear);
 
     }
+
+
 
 
 
