@@ -7,10 +7,10 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String name, String email, int phoneNumberNumber, String customerCity){
+    public Customer(String name, String email, int phoneNumber, String customerCity){
         this.customerCity=customerCity;
         this.name=name;
-        this.phoneNumber=phoneNumberNumber;
+        this.phoneNumber=phoneNumber;
         this.email=email;
 
     }
