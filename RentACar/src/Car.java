@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.time.LocalDate;
 
 
-public class Car {  //car adında bir clas olşturuldu.  özellikler  bellirlendi .
+public abstract class Car {  //car adında bir clas olşturuldu.  özellikler  bellirlendi .
     public int modelYear;
     private String carBrand;
 
@@ -16,7 +16,7 @@ public class Car {  //car adında bir clas olşturuldu.  özellikler  bellirlend
     static LocalDate localDate = LocalDate.now(); // arabaların eski ve yeni oluşuna göre ayrılması için
     // şimdi ki yılı alamk için oluşturulan nesne
 
-    static int nowYear = localDate.getYear(); // şimdi ki yıl değişkeni
+    public static int nowYear = localDate.getYear(); // şimdi ki yıl değişkeni
 
 
 
@@ -68,6 +68,7 @@ public class Car {  //car adında bir clas olşturuldu.  özellikler  bellirlend
         this.carColor=carColor;
     }
 
+    public abstract void axiom();
 }
 
 

@@ -15,7 +15,7 @@ public class Customer {
 
     }
 
-    public  int selectedCarModelYear ;
+    public static int selectedCarModelYear ;
     public void axiom(){
         System.out.println("lütfen dumunuzu belirtiniz. ");
         System.out.println("şirket için :company veya  şahış olarak:kişi yazınız ");
@@ -49,12 +49,12 @@ public class Customer {
                 System.out.println((i+1) + ". " + Suv.listCompany.get(i));
             }
 
-            // Read user input
+            // kulanıcıdan kaçıncı arba isteği
             Scanner input = new Scanner(System.in);
             System.out.print("kaçıncı arabayı seçtiğinizi belirtiniz: ");
             int selection1 = input.nextInt();
 
-            // Get the selected car
+            // seçilen araba
             Car selectedCar = Suv.listCompany.get(selection1-1);
 
         }else if (selection.equals("kişi")){
@@ -79,7 +79,9 @@ public class Customer {
             // seçilen araba
             Car selectedCar = Hatchback.listkisi.get(selection2-1);
             int selectedCarModelYear=selectedCar.getModelYear();
-            
+
+            //ücret hesabı için yıl bazlı oran
+
 
 
 
